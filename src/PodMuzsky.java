@@ -23,6 +23,6 @@ public class PodMuzsky extends Generator {
 
     @Override
     public int nextWord() {
-        return 0;
+        return 3;
     }
 }

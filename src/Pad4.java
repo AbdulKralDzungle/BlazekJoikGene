@@ -2,16 +2,15 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Random;
 
-public class Slovesa extends Generator {
+public class Pad4 extends Generator{
     private Random rn = new Random();
-
-
     @Override
     public String generate() {
         String s = "";
+
         try {
-            BufferedReader bf = new BufferedReader(new FileReader("src/Slovesa"));
-            int a = rn.nextInt(10);
+            BufferedReader bf = new BufferedReader(new FileReader("src/PodstatnaJmena/PodstatnáJména4pád"));
+            int a = rn.nextInt(43);
             for (int i = 0; i < a; i++) {
                 s = bf.readLine();
             }
@@ -23,11 +22,10 @@ public class Slovesa extends Generator {
 
     @Override
     public int nextWord() {
-        return switch (rn.nextInt(3)) {
-            case 0 -> 8;
+        return switch (rn.nextInt(2)) {
+            case 0 -> 3;
             case 1 -> -1;
-            case 2 -> 9;
-            default -> 8;
+            default -> 3;
         };
     }
 }
